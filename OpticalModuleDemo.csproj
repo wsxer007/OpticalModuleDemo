@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>OpticalModuleDemo</AssemblyName>
+    <RootNamespace>OpticalModuleDemo</RootNamespace>
+    <!-- 如果先用阶段一跑，不打算装 NuGet 包，就把 SerialTransport.cs 从文件夹里移走；
+         要用真实串口时，先在 VS 里安装 System.IO.Ports 包，再把这个文件放回来。 -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);SerialTransport.cs;README-使用说明.md</DefaultItemExcludes>
+  </PropertyGroup>
+
+</Project>
